@@ -1,0 +1,177 @@
+/* Réinitialisation des styles de base */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Styles de la barre de navigation horizontale */
+.navbar-horizontal {
+    background-color: #e61c1c;
+    overflow: hidden;
+    height: 60px;
+}
+
+.navbar-horizontal ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-horizontal li {
+    display: inline;
+}
+
+.navbar-horizontal a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar-horizontal a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Styles de la barre de navigation verticale */
+.navbar-vertical {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #2d18e2;
+    padding-top: 20px;
+}
+
+.navbar-vertical ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar-vertical li {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.navbar-vertical button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-vertical button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Styles du contenu principal */
+.main-content {
+    margin-left: 220px; /* Espace pour la barre de navigation verticale */
+    padding: 20px;
+}
+
+/* Styles de la section À propos */
+#about {
+    text-align: center; /* Centrer le texte */
+}
+
+#about h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+#about p {
+    margin-bottom: 20px;
+}
+
+/* Styles des images dans la section À propos */
+.images-about {
+    display: flex;
+    justify-content: space-around; /* Espacement égal entre les images */
+    align-items: center; /* Centrer les images verticalement */
+    gap: 20px; /* Espace entre les images */
+}
+
+/* Styles des images avec animation */
+.about-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation d'agrandissement des images au survol */
+.about-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Animation d'apparition des images */
+.images-about {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Styles du tableau de contact */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Styles des sections */
+.section {
+    display: none;
+}
+
+/* Affiche la première section par défaut */
+.section:first-of-type {
+    display: block;
+}
